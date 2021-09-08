@@ -1,8 +1,13 @@
 //A sass file called main.scss
 //(which will be responsible for importing the colors.scss and text.scss files)
 
-@use 'colors';
+
 @use 'text';
+@use 'colors';
+
+h1 {
+  text-align: center;
+}
 
 h2 {
   color: $title-color;

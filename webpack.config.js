@@ -18,7 +18,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({     //le voy a poner atributos y opciones, y donde esta el fichero que voy a escribir
+    new HtmlWebpackPlugin({
       title: "Webpack Run",
       template: path.resolve(__dirname, "index.html"),
       filename: "index.html" //va usar el path del output
