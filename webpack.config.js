@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack Run",
-      template: path.resolve(__dirname, "index.html"),
+      template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html" //va usar el path del output
     }),
   ]
