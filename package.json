@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Mini project for assembler",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/Paola3stefania/webpack-pill#readme",
   "devDependencies": {
-    "webpack": "^5.52.0"
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
   }
 }
