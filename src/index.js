@@ -6,6 +6,7 @@ that your application needs (at least the module-a and module-b)
 
 //import functions from modula a and module b
 import { CardContent, createButton } from "./js/module-a.js";
+import './styles/main.scss';
 
 const appDiv = document.getElementById("app");
 
