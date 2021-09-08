@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Paola3stefania/webpack-pill/issues"
   },
-  "homepage": "https://github.com/Paola3stefania/webpack-pill#readme"
+  "homepage": "https://github.com/Paola3stefania/webpack-pill#readme",
+  "devDependencies": {
+    "webpack": "^5.52.0"
+  }
 }
