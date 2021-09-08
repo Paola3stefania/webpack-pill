@@ -7,7 +7,11 @@
 h1 {
   color: $title-color;
   font-size: $font-size-title;
-  background-color: $secondary-color;
+  background-color: $primary-color;
+
+  &__img {
+    width: 10%;
+  }
 }
 
 p {
