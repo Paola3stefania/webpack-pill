@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/Paola3stefania/webpack-pill#readme",
   "devDependencies": {
     "webpack": "^5.52.0",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.1"
   }
 }

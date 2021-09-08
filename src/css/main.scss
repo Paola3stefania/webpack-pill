@@ -1,1 +1,20 @@
-//A sass file called main.scss (which will be responsible for importing the colors.scss and text.scss files)
+//A sass file called main.scss
+//(which will be responsible for importing the colors.scss and text.scss files)
+
+@use 'colors';
+@use 'text';
+
+h1 {
+  color: $title-color;
+  font-size: $font-size-title;
+  background-color: $secondary-color;
+}
+
+p {
+  color: $text-color;
+  font-size: $font-size-body;
+}
+
+.app {
+  background-color: $secondary-color;
+}

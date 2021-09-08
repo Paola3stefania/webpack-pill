@@ -1,0 +1,19 @@
+//A sass file called colors.scss that applies the css style rules related to colors.
+
+$primary-color: yellow;
+$secondary-color:gold;
+
+$text-color:darkblue;
+$title-color:blue;
+
+h1 {
+  color: $title-color;
+}
+
+p {
+  color: $text-color;
+}
+
+.app {
+  background-color: $secondary-color;
+}
