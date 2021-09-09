@@ -22,14 +22,48 @@ header {
   }
 }
 
-h2 {
-  color: a.$title-color;
-  background-color: a.$primary-color;
-  font-size: a.$font-size-title;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  & button {
+    width: 30%;
+    background-color: a.$button-color;
+    border: none;
+    line-height: a.$line-height;
+    cursor: pointer;
+    margin-top: 1rem;
+
+  }
 }
 
-p {
-  color: a.$text-color;
-  font-size: a.$font-size-body;
+
+
+
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    color: a.$title-color;
+    background-color: a.$primary-color;
+    font-size: a.$font-size-title;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  & img {
+    max-width: 50%;
+
+  }
+
+  & p {
+    color: a.$text-color;
+    font-size: a.$font-size-body;
+  }
 }

@@ -18,6 +18,7 @@ export class CardContent {
   }
 
   createCard(title, imgSrc, imgAlt, number) {
+    this.newCard.classList.add("card");
     this.cardTitle.textContent = title;
     this.newCard.append(this.cardTitle);
 

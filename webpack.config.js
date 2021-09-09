@@ -1,6 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+
 
 module.exports = {
   mode: "development",
@@ -25,18 +27,32 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'icon/[name][ext]'
-        }
+        type: 'asset/inline',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 12 * 1024 // 12kb
+          }
+        },
+
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.png$/,
+        type: 'asset/inline',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8 * 1024 // 8kb
+          }
+        },
+
+      },
+      {
+        test: /\.(png|jpg)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]'
         }
       }
+
 
     ]
   },
@@ -49,6 +65,12 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
+    }),
+    new CompressionPlugin({
+      filename: 'imgCompr/[name].gz',
+      test: /\.(png|jpg)$/,
+      threshold: 8192, //8kb
+      deleteOriginalAssets: true
     })
   ]
 };

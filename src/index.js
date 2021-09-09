@@ -16,7 +16,7 @@ import img3 from "./assets/img/mike-dorner.png"
 const appDiv = document.getElementById("app");
 
 setTitle("Webpack Love");
-
+createButton(appDiv);
 
 let card = new CardContent();
 card.createCard("First Card", img3, "banana", 1);
@@ -30,4 +30,3 @@ let cardThrd = new CardContent();
 cardThrd.createCard("Third Card", img2, "hand holding a lightbulb", 3);
 cardThrd.appendCard(appDiv);
 
-createButton(appDiv);
