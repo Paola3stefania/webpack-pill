@@ -2,8 +2,7 @@
 //(which will be responsible for importing the colors.scss and text.scss files)
 
 
-@use 'text';
-@use 'colors';
+@use './abstracts'as a;
 
 h1 {
   text-align: center;
@@ -14,17 +13,19 @@ h1 {
 }
 
 h2 {
-  color: $title-color;
-  font-size: $font-size-title;
-  background-color: $primary-color;
+  color: a.$title-color;
+
+  background-color: a.$primary-color;
+  font-size: a.$font-size-title;
 
 }
 
 p {
-  color: $text-color;
-  font-size: $font-size-body;
+  color: a.$text-color;
+  font-size: a.$font-size-body;
 }
 
 .app {
-  background-color: $secondary-color;
+  background-color: a.$secondary-color;
+
 }
