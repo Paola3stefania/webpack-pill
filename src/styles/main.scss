@@ -4,19 +4,26 @@
 
 @use './abstracts'as a;
 
-h1 {
-  text-align: center;
-  text-decoration: underline;
-  text-transform: uppercase;
+
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: a.$secondary-color;
 
   & img {
     width: 3%;
+  }
+
+  & h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: a.$web-title-color;
   }
 }
 
 h2 {
   color: a.$title-color;
-
   background-color: a.$primary-color;
   font-size: a.$font-size-title;
 
@@ -25,9 +32,4 @@ h2 {
 p {
   color: a.$text-color;
   font-size: a.$font-size-body;
-}
-
-.app {
-  background-color: a.$secondary-color;
-
 }

@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -22,6 +23,29 @@ module.exports = {
         test: /\.html$/,
         use: ["html-loader"]
       },
+      {
+        test: /\.svg$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'icons/[name][ext]'
+        }
+
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              limit: 8192,
+            }
+          },
+        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext]'
+        }
+      }
 
     ]
   },
@@ -31,5 +55,9 @@ module.exports = {
       template: path.resolve(__dirname, "src/index.html"),
       filename: "index.html" //va usar el path del output
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })
   ]
 };

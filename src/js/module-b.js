@@ -2,3 +2,9 @@
 module that makes use of the JQuery library
 (JQuery must be imported via webpack not manually)
  */
+
+
+export const setTitle = (title) => {
+
+  $("h1").text(title);
+}
