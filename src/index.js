@@ -10,7 +10,7 @@ import { setTitle } from "./js/module-b.js";
 import './styles/main.scss';
 import img1 from "./assets/img/carson-arias.jpg"
 import img2 from "./assets/img/diego-ph.png"
-import img3 from "assets/img/mike-dorner.png"
+import img3 from "./assets/img/mike-dorner.png"
 
 
 const appDiv = document.getElementById("app");

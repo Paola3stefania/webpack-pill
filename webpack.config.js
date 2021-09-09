@@ -27,20 +27,11 @@ module.exports = {
         test: /\.svg$/,
         type: 'asset/resource',
         generator: {
-          filename: 'icons/[name][ext]'
+          filename: 'icon/[name][ext]'
         }
-
       },
       {
         test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              limit: 8192,
-            }
-          },
-        ],
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]'
