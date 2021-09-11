@@ -5,8 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "watch": "webpack --watch",
-    "start": "webpack"
+    "build": "webpack --mode=production",
+    "start": "webpack",
+    "dev": "webpack serve --mode=development"
   },
   "repository": {
     "type": "git",
